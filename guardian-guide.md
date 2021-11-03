@@ -127,10 +127,10 @@ Abyss and Blume can be exchanged for mysterious scales in the shop - all others 
 Non-rainbows listed, replace with rainbows that have the same effects:
 
 - **Holy Lance** (lance/spear) - extends steel, does guardian damage to build aggro
-- **Holy Spine** (spine)/Wood Semence (germ): 20% increased healing received
-- **Lebelle** (bell)/Mythril Cutlass (cutlass): AOE damage for maintaining AOE aggro; bell can also extend bronze
+- **Holy Spine** (spine)/**Wood Semence** (germ): 20% increased healing received
+- **Lebelle** (bell)/**Mythril Cutlass** (cutlass): AOE damage for maintaining AOE aggro; bell can also extend bronze
 - **Crystal Clod** (clod): single target version of cursed, see [Cursed/Clod](#cursedclod)
-- **Phantom Skull/Crystal Sphere** (skull/sphere): pdmg/mdmg debuff against enemy, usually used by archer but sometimes requested from guardian if archer wants to use other weapons
+- **Phantom Skull** (skull)/**Crystal Sphere** (sphere): pdmg/mdmg debuff against enemy, usually used by archer but sometimes requested from guardian if archer wants to use other weapons
 
 Lance can be exchanged for pearls in the shop - all others are common gacha drops and any star can be used.
 
