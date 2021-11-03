@@ -20,7 +20,7 @@ In case you are not familiar with some of the terms/abbreviations/acronyms that 
 - DK: refers to activating your Dragon Kin on an attack
 - ST: single-target
 
-Weapons are also often abbreviated - see the [weapons](weapons) section for some of these.
+Weapons are also often abbreviated - see the [weapons](#weapons) section for some of these.
 
 
 ## Priorities
