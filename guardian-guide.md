@@ -100,7 +100,7 @@ Some considerations regarding guts:
 
 ## Weapons
 
-### Core rainbows
+### Core rainbows/reroll guide
 
 In priority order:
 
