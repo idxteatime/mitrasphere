@@ -194,7 +194,7 @@ With this in mind, you will want to collect 4-star guardian gear which has skill
 - mitra+ armor from blue seed gacha
 - mitra s gear from mysterious scale shop
 
-**However**, as noted in [Damage and resistances](#damageandresistances), elemental resistance is much more important than your stats, so it is advisable to still collect 4-star non-guardian gear (SM and archer gear work just fine) for at least your support grid, so that you can **bring at least 20% resist** to every fight.
+**However**, as noted in [Damage and resistances](#damage-and-resistances), elemental resistance is much more important than your stats, so it is advisable to still collect 4-star non-guardian gear (SM and archer gear work just fine) for at least your support grid, so that you can **bring at least 20% resist** to every fight.
 
 Also see [jadesphere's guide on farmable accessories](https://cdn.discordapp.com/attachments/886892174556413992/903090845383798794/unknown.png)
 
