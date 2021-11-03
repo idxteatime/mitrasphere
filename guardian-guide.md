@@ -151,7 +151,7 @@ There are two prevailing theories on the cumulative aspect:
 
 Both explanations more or less support the observed effect: as you continue to use cursed/clod as the fight goes on, you can hold aggro for longer and longer before you need to use it again; if you use it when the enemy is below 50% health, you will keep aggro the rest of the fight.
 
-Regardless of the exact mechanics, cursed/clod is extremely valuable as an aggro weapon because it scales with your teammate's damage/healing - no matter how strong your DPS/healers are, you are guaranteed to maintain aggro after a certain point in the fight. In particular, while ST aggro is relatively easy to maintain with bronze and guardian damage weapons, AOE shields are very rare, and guardian damage AOE shields are even rarer, making normal AOE aggro very difficult when playing with strong DPS. This is why Cursed Fang the one rainbow you definitely want to have.
+Regardless of the exact mechanics, cursed/clod is extremely valuable as an aggro weapon because it scales with your teammate's damage/healing - no matter how strong your DPS/healers are, you are guaranteed to maintain aggro after a certain point in the fight. In particular, while ST aggro is relatively easy to maintain with bronze and guardian damage weapons, AOE shields are very rare, and guardian damage AOE shields are even rarer, making normal AOE aggro very difficult when playing with strong DPS. This is why Cursed Fang is the one rainbow you definitely want to have.
 
 Here is my guidance for using cursed/clod:
 
