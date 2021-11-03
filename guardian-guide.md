@@ -252,16 +252,16 @@ Here are some examples of openers and core rotations (swap for rainbows where ap
 
 ### Openers
 
-- [opener] bronze - steel - mitra - folia - lance: a standard opener that sets up all the buffs you need; the healing from mitra/folia provides some aggro but time lance to grab aggro before a big attack
-- [opener] bronze - lance - steel - mitra - folia: for when a boss has a very fast ST first attack; better that you take it without all your miti up than a DPS
-- [opener] bronze - cutlass - mitra - folia - steel: for fights with multiple enemies to prioritize AOE aggro and party buffs
-- [opener] bronze - lance - mitra - folia - spine - steel: a very greedy 6-item opener that sets up everything you want; note that bronze will expire towards the end, but not a big deal if it’s just for those few seconds before being refreshed
+- bronze - steel - mitra - folia - lance: a standard opener that sets up all the buffs you need; the healing from mitra/folia provides some aggro but time lance to grab aggro before a big attack
+- bronze - lance - steel - mitra - folia: for when a boss has a very fast ST first attack; better that you take it without all your miti up than a DPS
+- bronze - cutlass - mitra - folia - steel: for fights with multiple enemies to prioritize AOE aggro and party buffs
+- bronze - lance - mitra - folia - spine - steel: a very greedy 6-item opener that sets up everything you want; note that bronze will expire towards the end, but not a big deal if it’s just for those few seconds before being refreshed
 
 ### Core rotations
 
-- [core] bronze - stone - spine - lance: standard core rotation that extends all buffs
-- [core] bronze - stone - spine - cutlass - lance: a 5-rotation for fights that don’t require a lot of adapting; skip cutlass to adapt when needed
-- [core] bell - stone - cutlass - lance: an AOE-oriented rotation with bell extending bronze
+- bronze - stone - spine - lance: standard core rotation that extends all buffs
+- bronze - stone - spine - cutlass - lance: a 5-rotation for fights that don’t require a lot of adapting; skip cutlass to adapt when needed
+- bell - stone - cutlass - lance: an AOE-oriented rotation with bell extending bronze
 
 Some notes:
 
