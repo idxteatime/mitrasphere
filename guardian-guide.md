@@ -120,7 +120,7 @@ Should only be replaced by a rainbow weapon that works as well or better:
 - Abyss Gladius (abyss) - 20% pdmg miti buff on party, poor man's mitra if no mitra
 - Blume Schild (blume) - 20% mdmg miti buff on party, poor man's folia if no folia
 
-Abyss and Blume can be exchanged for mystical scales in the shop - all others are common gacha drops and any star can be used (one copy can be received in guardian job coaching).
+Abyss and Blume can be exchanged for mysterious scales in the shop - all others are common gacha drops and any star can be used (one copy can be received in guardian job coaching).
 
 ### Other important components
 
@@ -192,7 +192,7 @@ With this in mind, you will want to collect 4-star guardian gear which has skill
 - kerat gear from Isvaal
 - noble accessories from Hiveval
 - mitra+ armor from blue seed gacha
-- mitra s gear from mystical scale shop
+- mitra s gear from mysterious scale shop
 
 **However**, as noted in [Damage and resistances](#damageandresistances), elemental resistance is much more important than your stats, so it is advisable to still collect 4-star non-guardian gear (SM and archer gear work just fine) for at least your support grid, so that you can bring 20% resist to every fight.
 
