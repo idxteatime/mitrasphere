@@ -83,7 +83,7 @@ Some shields will do guardian damage, which deals **physical damage** scaling wi
 
 Spears will do special guardian damage, which deals **magic damage** scaling on the **higher of your pdef or mdef** stat.
 
-Both of these damage types are affected by miti buffs/debuffs by half of its value - mitra/steel will increase guardian damage by 40%, while dark fang will only increase damage by 23.5% (30% pdmg increase but 5% pdmg decrease from 10% pdmg miti debuff).
+Both of these damage types are affected by miti buffs/debuffs by half of its value - mitra+steel will increase guardian damage by 40%, while dark fang will only increase damage by 23.5% (30% pdmg increase but 5% pdmg decrease from 10% pdmg miti debuff).
 
 ### Inverted scales
 
