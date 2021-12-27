@@ -5,6 +5,7 @@ This is a repository for various guides and information for [Mitrasphere](https:
 ## Guides
 
 - [Tea's Guardian Guide](guardian-guide.md)
+- [Tea's Guardian Rainbow Weapons Guide](guardian-weapons-guide.md)
 
 ## Other Links
 
