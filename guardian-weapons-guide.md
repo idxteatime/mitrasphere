@@ -30,8 +30,8 @@ other | | ![image](https://user-images.githubusercontent.com/10483639/147438527-
 
 Some rough heuristics:
 
-- generally the difference between tiers is the magnitude of the effect/buff
+- generally the difference between tiers is the magnitude of the effect/buff, and how practical they are to use in most fights
 - gud extenders are ones that serve multiple purposes and fit well in a grid
-- gud damage weapons have some kind of amplifier effect, e.g. hate gain multiplier, elemental res down
+- gud aggro weapons have some kind of amplifier effect, e.g. hate gain multiplier, elemental res down
 
 More detailed evaluations of each weapon is available in #banners on the Discord.
