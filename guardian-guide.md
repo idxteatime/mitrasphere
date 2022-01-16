@@ -71,8 +71,8 @@ For method 2, see [Cursed/Riemel/Clod](#cursedriemelclod).
 
 The following are the list of buffs that guardians are responsible for maintaining, as of this writing:
 
-- [H] party physical damage taken down (mitra/abyss/stone)
-- [G] party magic damage taken down (folia/blume/stone)
+- [H] party physical damage taken down (bcs/mitra/abyss/stone)
+- [G] party magic damage taken down (bcs/folia/blume/stone)
 - [I] self physical damage taken down (steel/lance/tamtam)
 - [F] self magic damage taken down (steel/lance/tamtam)
 - [A] self hate gain multiplier (bronze/bell/terra)
@@ -104,9 +104,12 @@ Some considerations regarding guts:
 
 In priority order:
 
+
 - **Cursed Fang** (cursed): primary AOE aggro, see [Cursed/Riemel/Clod](#cursedriemelclod) for explanation
-- **Mitra Knight’s Spada** (mitra): 30% pdmg miti buff on party, extended by stone
-- **Folia Guard** (folia): 30% mdmg miti buff on party, extended by stone
+- **Blue Comet Shield** (bcs): 30% pdmg + mdmg miti buff on party, extended by stone
+  - or separately:
+  - **Mitra Knight’s Spada** (mitra): 30% pdmg miti buff on party, extended by stone
+  - **Folia Guard** (folia): 30% mdmg miti buff on party, extended by stone
 - **Draak Shield** (draak): additional 30% (50% on DK) pdmg miti buff on party for 7.9s, for blocking 1-2 strong AOE attacks
 - **Träne Schild** (trane): additional 30% (50% on DK) mdmg miti buff on party for 7.9s, for blocking 1-2 strong AOE attacks
 
@@ -117,10 +120,11 @@ Should only be replaced by a rainbow weapon that works as well or better:
 - **Steel Falchion** (steel/falc) - 50% pdmg/mdmg miti buff on self
 - **Bronze Spatha** (bronze/spatha) - 800% aggro multiplier on all attacks
 - **Stone Plate** (stone/plate) - 10% (20% with DK) pdmg/mdmg miti buff on party, extends mitra/folia
+- **Riemel Schild** (riemel) - 2 sec cast version of cursed, see [Cursed/Riemel/Clod](#cursedriemelclod)
 - **Abyss Gladius** (abyss) - 20% pdmg miti buff on party, poor man's mitra if no mitra
 - **Blume Schild** (blume) - 20% mdmg miti buff on party, poor man's folia if no folia
 
-Abyss and Blume can be exchanged for mysterious scales in the shop - all others are common gacha drops and any star can be used (one copy can be received in guardian job coaching).
+Abyss, Blume, and Riemel can be exchanged for mysterious scales in the shop - all others are common gacha drops and any star can be used (one copy can be received in guardian job coaching).
 
 ### Other important components
 
@@ -167,8 +171,8 @@ Here is my guidance for using them in battle:
 
 ### General weapon grid template
 
-1. mitra/folia
-1. mitra/folia or flex if only one type of damage
+1. mitra/folia/bcs
+1. mitra/folia or flex if using bcs or only one type of damage
 1. steel
 1. stone
 1. bronze or flex if relying on cursed/riemel/clod for aggro
@@ -244,7 +248,7 @@ Most buffs you are responsible for last for **25 seconds**. Given that weapons h
 
 You will usually start fights with an **"opener"** - a series of attacks that set up buffs to be extended by your core rotation. The order of your opener should be determined by the type and timing of the boss’s first attack - if they attack quickly, you need to prioritize aggro, then either self or party miti depending on the type of attack, or you may need to prioritize AOE aggro in stages that have multiple enemies. It can also be influenced by the strength of your party, as the first part of the fight is when your aggro is most unstable. You may need to weave in high-damage attacks or use cursed/riemel/clod right before boss attacks to try and grab aggro from your DPS in time.
 
-If you are missing mitra/folia/abyss/blume, you will need to use your **first DK on stone** to establish the 20% party miti. Otherwise, your DK should be focused on your **high-damage attacks**, to build up and maintain a solid lead on aggro. Alternatively, you could save them for self-healing if you feel like you’re in a pinch and the healer is too busy trying to revive the swordsman for the 8th time. If you are using **draak/trane** (and relying on hate steal for aggro), you should save your DKs for them to increase the miti amount.
+If you are missing bcs/mitra/folia/abyss/blume, you will need to use your **first DK on stone** to establish the 20% party miti. Otherwise, your DK should be focused on your **high-damage attacks**, to build up and maintain a solid lead on aggro. Alternatively, you could save them for self-healing if you feel like you’re in a pinch and the healer is too busy trying to revive the swordsman for the 8th time. If you are using **draak/trane** (and relying on hate steal for aggro), you should save your DKs for them to increase the miti amount.
 
 Once you are into your core rotation, your focus is on when to break rotation to do things like **back on TBs/boss mechanics, heal yourself, and reapply buffs on revived teammates**. Because harder fights require constant flexibility, a 3 or 4-weapon core rotation is generally preferred to leave plenty of extra padding in your 25 second window. Try not to queue too many actions so that you can quickly adapt when you need to, and always know exactly where you are in your rotation so that you never lose buffs after breaking rotation.
 
