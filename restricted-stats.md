@@ -111,7 +111,7 @@ Now we have the correct value for HP as we see in-game. We can go back to Crysta
 
 | stat | base value | percentage | restricted value |
 |---|---|---|---|
-| HP | 32 | 32/90=0.355 | 1000\*0.354=355 |
+| HP | 32 | 32/90=0.355 | 1000\*0.355=355 |
 | PATK | 19 | 19/90=0.211 | 1000\*0.211=211 |
 | PDEF | 23 | 23/90=0.255 | 1000\*0.255=255 |
 | MATK | 6 | 6/90=0.066 | 1000\*0.066=66 |
