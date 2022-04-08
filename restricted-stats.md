@@ -15,8 +15,9 @@ restricted stat = floor(restricted power * sum of all lvl 1 item stats / total i
 where total item power = floor(total HP * 2 / 3 + total PATK + total PDEF + total MATK + total MDEF)
 ```
 - this means there's no easy way to use in-game stat summaries to estimate your restricted stats
-- instead, you can look at common stat distribution patterns to estimate the impact of certain items on your final stats
-- main grid items dominate the final stat distribution; support grid should have items with stat distributions that are focused on whatever primary stat you want to increase
+- for the most part, the details of the formula aren't important - just equipping as many items as you have that have the stat you want to maximize as its highest stat will generally give you a decent set for restricted content
+- for support gear, different items with similar stat distributions will generally not have much of a difference between them, regardless of rarity
+- however, higher-star support gear is more resilient to changes in the main grid due to their higher base values
 
 ### the formula ###
 
@@ -59,7 +60,7 @@ We then calculate the respective stat percentage and restricted stats in a 1000 
 
 You may notice that the percentages don't add up to 1 - this is because the item power was calculated using 2/3 of the HP, whereas the restricted stat uses the full HP value.
 
-Let's check these numbers in-game, at least the easy one to check which is HP. First we remove all equipment except this one and make sure the stats reflected in the stat summary is the same as the item stats:
+Let's check these numbers in-game, at least the easy one to check which is HP. First we remove all equipment except this one and make sure the stats reflected in the stat summary are the same as the item stats:
 
 ![File Apr 06, 20 39 18](https://user-images.githubusercontent.com/10483639/162117333-cf7ef441-3c2c-4dea-b817-23aee510db45.jpeg)
 
@@ -85,7 +86,7 @@ Let's check in-game:
 
 ![File Apr 06, 21 13 29](https://user-images.githubusercontent.com/10483639/162118766-cc42d211-b62f-4290-8d24-f14d652c611f.jpeg)
 
-Dang, we're still off. We're rounding a bit in our calcuations, so we can imagine that maybe the game is doing a different kind of rounding that accounts for the difference. Or maybe they're not rounding at all, and doing something entirely different. Trying various kinds of decimal-to-integer operations at various points in the formula until we get the right number would be quite a hassle, but luckily the game gives us some hints that narrows down the approach:
+Dang, we're still off. We're rounding a bit in our calculations, so we can imagine that maybe the game is doing a different kind of rounding that account for the difference. Or maybe they're not rounding at all, and doing something entirely different. Trying various kinds of decimal-to-integer operations at various points in the formula until we get the right number would be quite a hassle, but luckily the game gives us some hints that narrow down the approach:
 
 - all stat numbers in the game are displayed as integers, so we can assume that the game is likely storing them as integers as well, not decimals
 - likewise, combat power is always an integer, though per-item power is never displayed explicitly
@@ -104,7 +105,7 @@ Instead of using 89.67, we use 89 as the item power, and we also use `floor` on 
 | MATK | 21 | 0.235 | 235 |
 | MDEF | 19 | 0.213 | 213 |
 
-Now we have the correct value for HP as we see in game. We can go back to Crystal Clod and use the modified formula to make sure we get the right HP as well:
+Now we have the correct value for HP as we see in-game. We can go back to Crystal Clod and use the modified formula to make sure we get the right HP as well:
 
 | stat | base value | percentage | restricted value |
 |---|---|---|---|
@@ -118,7 +119,7 @@ Now we have the correct value for HP as we see in game. We can go back to Crysta
 
 One detail we need to clarify is whether the restricted stats are calculated for each item and then summed, or if the base stats are summed first and the restricted stats calculated from the sum. Altema's formula specifies that it is to be used per-item, but there is a major issue with that approach: how do we aggregate the per-item restricted values? Clearly we can't just sum them, because the stats are already scaled to the stage power for each item. Do we average the stats across all items? Do we average the percentages? If we do average, we would start to see nontrivial stat loss from repeatedly using `floor`, and even worse for items in the support grid, where many stats would just end up becoming 0.
 
-It seems more sensible that the game sums up the base stats of the items first, then calculate the restricted stats from the sums. Let's verify by equipping both items we used previously in the main grid. The formula tells us that our total item power is `floor(32 * 2 / 3 + 19 + 23 + 6 + 21 + 22 * 2 / 3 + 15 + 20 + 21 + 19) = 180` and our restricted HP should be `floor((32 + 22) / 180 * 1000) = 300`. Let's check in-game:
+It seems more sensible that the game sums up the base stats of the items first, then calculates the restricted stats from the sums. Let's verify by equipping both items we used previously in the main grid. The formula tells us that our total item power is `floor(32 * 2 / 3 + 19 + 23 + 6 + 21 + 22 * 2 / 3 + 15 + 20 + 21 + 19) = 180` and our restricted HP should be `floor((32 + 22) / 180 * 1000) = 300`. Let's check in-game:
 
 ![File Apr 06, 23 13 03](https://user-images.githubusercontent.com/10483639/162132729-772c6543-f08f-4c81-a605-d3a60589532f.jpeg)
 
@@ -144,7 +145,7 @@ Checking in-game:
 
 ### the actual formula ###
 
-Summarizing the above, we can rearticulate the formula as follows:
+Summarizing the above, we can re-articulate the formula as follows:
 
 ```
 restricted stat = floor(restricted power * sum of all lvl 1 item stats / total item power)
@@ -189,7 +190,7 @@ The formula tells us that we should take at least `3455 * 5000 / (5160 + 5000) =
 
 ![File Apr 07, 00 14 22](https://user-images.githubusercontent.com/10483639/162141539-5c81be83-56b6-4252-9f5d-a4893af7fbf0.jpeg)
 
-Good, we are confident that the damage taken formula is accurate. Let's now use it to verify our restricted PDEF stats across various equipment. We will first calculate the attack power of "Ssss..." on level 0 using a derived PDEF, then use to try and predict the damage taken with other equipment.
+Good, we are confident that the damage taken formula is accurate. Let's now use it to verify our restricted PDEF stats across various equipment. We will first calculate the attack power of "Ssss..." on level 0 using a derived PDEF, then use it to try and predict the damage taken with other equipment.
 
 Using the previous chart for Metal Core that used the correct formula, we get a restricted PDEF of 224. Let's check the damage taken with this:
 
@@ -213,7 +214,7 @@ Our formula tells us that our restricted PDEF will be 179, so our expected damag
 
 So we have a verified and accurate formula for calculating restricted stats from lvl 1 stats of your gear. What can we do with this information? How can we use this to create optimal sets for restricted content? It's very apparent that the formula alone isn't going to get us there - it would be entirely impractical to look up the lvl 1 stats of all the gear you want to use and sum them together in various combinations to get the stat totals you need to calculate and compare the restricted stats.
 
-Intuitively, the formula tells us that stat distribution is important - if you want to maximize a particular stat, you want to wear a set of gear that maximizes that stat while minimizing all other stats (this is why much of our existing recommendations on restricted content gear is based on per-item stat distributions taken from the now-defunct kotori site). We can also tell that the magnitude of the lvl 1 stat is important - high stat values means they constitute a larger portion of the stat totals and have a bigger impact on the final stat distribution. And since the support grid gear has their stats scaled down to 20%, this means that the main grid gear has significantly more impact on the final stat distribution than the support grid.
+Intuitively, the formula tells us that stat distribution is important - if you want to maximize a particular stat, you want to wear a set of gear that maximizes that stat while minimizing all other stats (this is why much of our existing recommendations on restricted content gear is based on per-item stat distributions taken from the now-defunct kotori site). We can also tell that the magnitude of the lvl 1 stat is important - high stat values mean they constitute a larger portion of the stat totals and have a bigger impact on the final stat distribution. And since the support grid gear has their stats scaled down to 20%, this means that the main grid gear has significantly more impact on the final stat distribution than the support grid.
 
 Main grid gear is not exactly easy to optimize for stats - weapons have to be tailored to your rotations and effectiveness against each boss, and armor/accessories are typically selected based on their passive skills. Since there isn't much we can do to control the stat distribution of your main grid, we can really only optimize our restricted sets by setting up our support grid to push our stat distribution towards whichever stat we want to maximize. Let's take a look at some examples, using a set main grid and comparing the stat changes with different support grid options.
 
@@ -241,7 +242,7 @@ Let's double-check in-game:
 
 ![File Apr 07, 18 09 20](https://user-images.githubusercontent.com/10483639/162343688-a021d620-7599-4e78-9609-75d1fb546eca.jpeg)
 
-Now let's add in support weapons - we'll use 1-star Wooden Stake, which has one of the highest PDEF stat percentage in the support slot (largely due to `floor` making its already low other stats even lower). Here is the stat gains for adding one of these in the support slot:
+Now let's add in support weapons - we'll use 1-star Wooden Stake, which has one of the highest PDEF stat percentage in the support slot (largely due to `floor` making its already low other stats even lower). Here is the stat gain for adding one of these in the support slot:
 
 ![File Apr 07, 18 14 05](https://user-images.githubusercontent.com/10483639/162344172-264cb0dc-f5dd-44ac-9236-4264e8019711.jpeg)
 
@@ -324,3 +325,56 @@ The issue is that items with the same primary stat tend to have very similar sta
 In other words, as long as you are using support gear that has a similar stat distribution to your main grid, the specific item choices don't make a huge difference as far as restricted stats are concerned.
 
 ### support gear resilience ###
+
+...or does it? In the previous section, we found that if we generally use gear with similar stat distributions, we only introduce very minor changes in our final stat distribution. But what if we can't? Here's a not-so-uncommon scenario: you're running an EX boss with a group and the boss's magic damage raidbuster is giving your party a rough time. You ask if the archer has Crystal Sphere; they've never heard of it. Okay, that's fine, you have a flex slot in your weapon grid and you have a 2-star Crystal Sphere lying around in your inventory that you haven't cleaned for 2 weeks:
+
+![File Apr 07, 20 28 40](https://user-images.githubusercontent.com/10483639/162357886-fa6328cf-8ea7-483c-b06e-89e79fbf8458.jpeg)
+
+Using our earlier main grid, we swap out Mythril Cutlass. Here is our new main grid stats:
+
+| stat | base value | percentage |
+|---|---|---|
+| HP | 306 | 0.365 |
+| PATK | 179 | 0.203 |
+| PDEF | 221 | 0.264 |
+| MATK | 65 | 0.077 |
+| MDEF | 177 | 0.211 |
+
+Let's now compare two extremes from our support grid options - the 4-star set we looked at earlier, and a 1-star set composed of Wooden Stakes and Knight armor/accessories:
+
+![File Apr 07, 20 32 57](https://user-images.githubusercontent.com/10483639/162357903-e35a87a5-78a7-44e8-9a62-e34180442738.jpeg)
+
+Here is our distribution using the 4-star set with our new main grid:
+
+| stat | base value | percentage |
+|---|---|---|
+| HP | 707 | 0.374 |
+| PATK | 372 | 0.196 |
+| PDEF | 524 | 0.277 |
+| MATK | 115 | 0.06 |
+| MDEF | 407 | 0.215 |
+
+And here it is with the 1-star set:
+
+| stat | base value | percentage |
+|---|---|---|
+| HP | 396 | 0.381 |
+| PATK | 200 | 0.192 |
+| PDEF | 281 | 0.27 |
+| MATK | 65 | 0.062 |
+| MDEF | 227 | 0.218 |
+
+Comparing the two, the 4-start support grid gives us 0.7% more PDEF than the 1-star set in this game, which is a lot bigger than the differences in support grid choices that we looked at earlier. Adding an item with a significantly different stat distribution to our main grid caused our final stat distributions to shift by quite a bit, but the larger base values of our 4-star support grid meant that we could maintain our stat distribution closer to our primary stat, whereas the 1-star support grid, despite having a similar stat distribution, has a harder time maintaining the ideal stat distribution due to its lower base values. You can imagine that the more suboptimal items you end up using in your main grid, the more prominent this effect becomes. 4-star support grids, with their larger base values, are more resilient to changes in the main grid than lower-star support grids.
+
+Is it important in practice? 0.7% in a 20k restricted EX boss is a difference of 140 in the stat; for defensive stats with diminishing returns it's nothing to cry over, but for linear-scaling offensive stats it might be a good chunk of additional damage. And you will frequently need to use a couple of items with sub-optimal stat distributions as part of adaptations to boss mechanics or party dynamics. So there is a case to be made for using higher-star support grids when given the choice. Of course, higher-star gear is harder to collect, and you want to have a full support grid for each element, so the lower-star support grids are much easier to put together to give you that all-important 20% elemental resistance and 10% CS.
+
+### wow did you really read all of that? ###
+
+If you've managed to get here, you now have two options:
+
+- disagree with this general take and try to math out more optimal restricted gear setups
+- agree and forget about all this complicated restricted stats stuff and just use the same sets for both normal and restricted content
+
+I highly recommend the latter.
+
+![File Apr 07, 21 40 22](https://user-images.githubusercontent.com/10483639/162364795-19009a14-0c92-440a-a3cb-55deb38e1a05.jpeg)
