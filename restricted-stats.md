@@ -9,11 +9,13 @@ While the JP Altema site defines a formula for how stats are calculated in restr
 ### tl;dr ###
 
 - the formula:
+
 ```
 restricted stat = floor(restricted power * sum of all lvl 1 item stats / total item power)
 
 where total item power = floor(total HP * 2 / 3 + total PATK + total PDEF + total MATK + total MDEF)
 ```
+
 - this means there's no easy way to use in-game stat summaries to estimate your restricted stats
 - for the most part, the details of the formula aren't important - just equipping as many items as you have that have the stat you want to maximize as its highest stat will generally give you a decent set for restricted content
 - for support gear, different items with similar stat distributions will generally not have much of a difference between them, regardless of rarity
