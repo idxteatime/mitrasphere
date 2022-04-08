@@ -322,7 +322,7 @@ This looks a bit more promising - our HP percentage is much lower, but our PDEF 
 
 That's not too bad - we've reduced the HP gain to 0.4% and now have 0.9% PDEF gain, as well as a 0.5% MDEF gain, which doesn't hurt. But we are moving grains of sand across a couple of giant sand dunes at this point. There's no obvious way to shift our initial 27.1% PDEF even by single-digit percentages.
 
-The issue is that items with the same primary stat tend to have very similar stat distributions. All of the gear we've been playing with have high HP, PDEF, medium MDEF and PATK, and low MATK. If we wanted to make significant improvements, we would need to find support gear that still has high PDEF, but much lower HP, PAT, and MDEF, which in general doesn't exist. So if you are trying to optimize a certain stat and you are already using mostly gear that has that stat as its highest stat, there's really not much room for improvement between different gear options.
+The issue is that items with the same primary stat tend to have very similar stat distributions. All of the gear we've been playing with have high HP, PDEF, medium MDEF and PATK, and low MATK. If we wanted to make significant improvements, we would need to find support gear that still has high PDEF, but much lower HP, PATK, and MDEF, which in general doesn't exist. So if you are trying to optimize a certain stat and you are already using mostly gear that has that stat as its highest stat, there's really not much room for improvement between different gear options.
 
 In other words, as long as you are using support gear that has a similar stat distribution to your main grid, the specific item choices don't make a huge difference as far as restricted stats are concerned.
 
