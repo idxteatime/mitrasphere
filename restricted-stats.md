@@ -58,7 +58,7 @@ We then calculate the respective stat percentage and restricted stats in a 1000 
 | MATK | 6 | 6/90.33=0.066 | 1000\*0.066=66 |
 | MDEF | 21 | 21/90.33=0.232 | 1000\*0.232=232 |
 
-You may notice that the percentages don't add up to 1 - this is because the item power was calculated using 2/3 of the HP, whereas the restricted stat uses the full HP value.
+You may notice that the percentages don't add up to 1 - this is because the item power was calculated using 2/3 of the HP, whereas the percentage uses the full HP value.
 
 Let's check these numbers in-game, at least the easy one to check which is HP. First we remove all equipment except this one and make sure the stats reflected in the stat summary are the same as the item stats:
 
@@ -366,7 +366,7 @@ And here it is with the 1-star set:
 
 Comparing the two, the 4-start support grid gives us 0.7% more PDEF than the 1-star set in this game, which is a lot bigger than the differences in support grid choices that we looked at earlier. Adding an item with a significantly different stat distribution to our main grid caused our final stat distributions to shift by quite a bit, but the larger base values of our 4-star support grid meant that we could maintain our stat distribution closer to our primary stat, whereas the 1-star support grid, despite having a similar stat distribution, has a harder time maintaining the ideal stat distribution due to its lower base values. You can imagine that the more suboptimal items you end up using in your main grid, the more prominent this effect becomes. 4-star support grids, with their larger base values, are more resilient to changes in the main grid than lower-star support grids.
 
-Is it important in practice? 0.7% in a 20k restricted EX boss is a difference of 140 in the stat; for defensive stats with diminishing returns it's nothing to cry over, but for linear-scaling offensive stats it might be a good chunk of additional damage. And you will frequently need to use a couple of items with sub-optimal stat distributions as part of adaptations to boss mechanics or party dynamics. So there is a case to be made for using higher-star support grids when given the choice. Of course, higher-star gear is harder to collect, and you want to have a full support grid for each element, so the lower-star support grids are much easier to put together to give you that all-important 20% elemental resistance and 10% CS.
+Is it important in practice? 0.7% in a 20k restricted EX boss is a difference of 140 in the stat; for defensive stats with diminishing returns it's nothing to cry over, but for linear-scaling offensive stats it might be a good chunk of additional damage. And you will frequently need to use a couple of items with suboptimal stat distributions as part of adaptations to boss mechanics or party dynamics. So there is a case to be made for using higher-star support grids when given the choice. Of course, higher-star gear is harder to collect, and you want to have a full support grid for each element, so the lower-star support grids are much easier to put together to give you that all-important 20% elemental resistance and 10% CS.
 
 ### wow did you really read all of that? ###
 
