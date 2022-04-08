@@ -1,4 +1,4 @@
-## Tea's Restricted Stats Research ##
+## Tea's Restricted Stats Research
 
 Restricted Stages are stages where all players (and enemies) have their stats scaled to a certain common baseline.
 
